@@ -169,7 +169,7 @@ class LoginLockdown_Setup extends LoginLockdown
             'global_block'                 => 0,
             'uninstall_delete'             => 0,
             'block_message'                => 'We\'re sorry, but your IP has been blocked due to too many recent failed login attempts.',
-            'global_unblock_key'           => 'll' . md5(time() . wp_rand(10000, 9999)),
+            'global_unblock_key'           => 'll' . md5(wp_generate_password(24)),
             'whitelist'                    => array()
         );
 

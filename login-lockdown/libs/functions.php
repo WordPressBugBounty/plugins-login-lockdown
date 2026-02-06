@@ -368,7 +368,7 @@ class LoginLockdown_Functions extends LoginLockdown
         $email = sanitize_text_field(wp_unslash($_POST['loginlockdown_recovery_email']));
         $user = get_user_by('email', $email);        
         if (user_can($user, 'administrator')) {
-          $unblock_key = md5(time() . wp_rand(10000, 9999));
+          $unblock_key = 'll' . md5(wp_generate_password(24));
           $unblock_attempts = get_transient('loginlockdown_unlock_count_' . $user->ID);
           if (!$unblock_attempts) {
             $unblock_attempts = 0;

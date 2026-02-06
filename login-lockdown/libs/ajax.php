@@ -46,7 +46,7 @@ class LoginLockdown_AJAX extends LoginLockdown
 
             if (sanitize_text_field(wp_unslash($_POST['reset'])) == 'true') {
                 sleep(1);
-                $options['global_unblock_key'] = 'll' . md5(time() . wp_rand(10000, 9999));
+                $options['global_unblock_key'] = 'll' . md5(wp_generate_password(24));
                 update_option(LOGINLOCKDOWN_OPTIONS_KEY, array_merge($options, $update));
             }
             wp_send_json_success(array('url' => '<a href="' . site_url('/?loginlockdown_unblock=' . $options['global_unblock_key']) . '">' . site_url('/?loginlockdown_unblock=' . $options['global_unblock_key']) . '</a>'));
