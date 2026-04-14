@@ -3,7 +3,7 @@
 /**
  * Login Lockdown
  * https://wploginlockdown.com/
- * (c) WebFactory Ltd, 2022 - 2024, www.webfactoryltd.com
+ * (c) WebFactory Ltd, 2022 - 2026, www.webfactoryltd.com
  */
 
 class LoginLockdown_Functions extends LoginLockdown
@@ -19,7 +19,7 @@ class LoginLockdown_Functions extends LoginLockdown
         "SELECT COUNT(login_attempt_ID) FROM " . $wpdb->lockdown_login_fails . " WHERE login_attempt_date + INTERVAL %d MINUTE > %s AND login_attempt_IP = %s",
         array($options['retries_within'], current_time('mysql'), $ip)
       )
-    ); 
+    );
 
     return $numFails;
   }
@@ -205,7 +205,7 @@ class LoginLockdown_Functions extends LoginLockdown
       if (isset($_POST['loginlockdown_captcha'])) { // phpcs:ignore
         $captcha_responses = array_map('sanitize_text_field', wp_unslash($_POST['loginlockdown_captcha'])); // phpcs:ignore
         $captcha_tokens = array_map('sanitize_text_field', wp_unslash($_POST['loginlockdown_captcha_token'])); // phpcs:ignore
-        
+
         foreach ($captcha_responses as $captcha_id => $captcha_val) {
             if (wp_hash($captcha_val) === $captcha_tokens[$captcha_id]) {
                 return true;
@@ -361,12 +361,12 @@ class LoginLockdown_Functions extends LoginLockdown
     echo '<form method="POST">';
 
     if (isset($_POST['loginlockdown_recovery_nonce']) && wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['loginlockdown_recovery_nonce'])), 'loginlockdown_recovery')) {
-      
+
       if (!isset($_POST['loginlockdown_recovery_email']) || !filter_var(wp_unslash($_POST['loginlockdown_recovery_email']), FILTER_VALIDATE_EMAIL)) {
         $display_message = '<p class="error">Invalid email address.</p>';
       } else {
         $email = sanitize_text_field(wp_unslash($_POST['loginlockdown_recovery_email']));
-        $user = get_user_by('email', $email);        
+        $user = get_user_by('email', $email);
         if (user_can($user, 'administrator')) {
           $unblock_key = 'll' . md5(wp_generate_password(24));
           $unblock_attempts = get_transient('loginlockdown_unlock_count_' . $user->ID);
@@ -631,7 +631,7 @@ class LoginLockdown_Functions extends LoginLockdown
   static function math_captcha_generate($captcha_id = false)
   {
       ob_start();
-      
+
       $a = wp_rand(0, (int) 10);
       $b = wp_rand(0, (int) 10);
       if(isset($_GET['color'])){ // phpcs:ignore

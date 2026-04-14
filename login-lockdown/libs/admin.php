@@ -3,7 +3,7 @@
 /**
  * Login Lockdown
  * https://wploginlockdown.com/
- * (c) WebFactory Ltd, 2022 - 2024, www.webfactoryltd.com
+ * (c) WebFactory Ltd, 2022 - 2026, www.webfactoryltd.com
  */
 
 class LoginLockdown_Admin extends LoginLockdown
@@ -344,7 +344,7 @@ class LoginLockdown_Admin extends LoginLockdown
 
             <p class="text-center"><a href="#" class="button button-buy install-wp301">Install and activate the <u>free</u> WP 301 Redirects plugin</a></p>
 
-            <p><a href="https://wordpress.org/plugins/eps-301-redirects/" target="_blank">WP 301 Redirects</a> is a free WP plugin maintained by the same team as this Login Lockdown plugin. It has <b>+250,000 users, 5-star rating</b>, and is hosted on the official WP repository.</p>
+            <p><a href="https://wordpress.org/plugins/eps-301-redirects/" target="_blank">WP 301 Redirects</a> is a free WP plugin maintained by the same team as this Login Lockdown plugin. It has <b>+300,000 users, 5-star rating</b>, and is hosted on the official WP repository.</p>
             </div>';
     }
 
@@ -441,8 +441,7 @@ class LoginLockdown_Admin extends LoginLockdown
         </tr>
 
         <tr>
-        <td><a class="button button-buy" data-href-org="https://wploginlockdown.com/buy/?product=personal-launch-new&ref=pricing-table" href="https://wploginlockdown.com/buy/?product=personal-launch-new&ref=pricing-table" target="_blank">Lifetime License<br>$79 -&gt; BUY NOW</a>
-        <br>or <a class="button-buy" data-href-org="https://wploginlockdown.com/buy/?product=personal-monthly&ref=pricing-table" href="https://wploginlockdown.com/buy/?product=personal-monthly&ref=pricing-table" target="_blank">only $6.99 <small>/month</small></a></td>
+        <td><a class="button button-buy" data-href-org="https://wploginlockdown.com/buy/?product=personal-launch-new&ref=pricing-table" href="https://wploginlockdown.com/buy/?product=personal-launch-new&ref=pricing-table" target="_blank">Lifetime License<br>$79 -&gt; BUY NOW</a></td>
         <td><a class="button button-buy" data-href-org="https://wploginlockdown.com/buy/?product=team-launch&ref=pricing-table" href="https://wploginlockdown.com/buy/?product=team-launch&ref=pricing-table" target="_blank">Lifetime License<br>$99 -&gt; BUY NOW</a></td>
         <td><a class="button button-buy" data-href-org="https://wploginlockdown.com/buy/?product=agency-launch&ref=pricing-table" href="https://wploginlockdown.com/buy/?product=agency-launch&ref=pricing-table" target="_blank">Lifetime License<br>$179 -&gt; BUY NOW</a></td>
         </tr>

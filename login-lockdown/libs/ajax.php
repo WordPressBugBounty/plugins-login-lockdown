@@ -3,7 +3,7 @@
 /**
  * Login Lockdown
  * https://wploginlockdown.com/
- * (c) WebFactory Ltd, 2022 - 2024, www.webfactoryltd.com
+ * (c) WebFactory Ltd, 2022 - 2026, www.webfactoryltd.com
  */
 
 class LoginLockdown_AJAX extends LoginLockdown
@@ -198,7 +198,7 @@ class LoginLockdown_AJAX extends LoginLockdown
         }
 
         $aColumns = array('lockdown_ID', 'unlocked', 'lockdown_date', 'release_date', 'reason', 'lockdown_IP');
-        
+
         $sLimit = '';
         if (isset($_GET['iDisplayStart']) && isset($_GET['iDisplayLength']) && $_GET['iDisplayLength'] != '-1') {
             $limit_offset = intval($_GET['iDisplayStart']);

@@ -3,7 +3,7 @@
 /**
  * Login Lockdown
  * https://wploginlockdown.com/
- * (c) WebFactory Ltd, 2022 - 2024, www.webfactoryltd.com
+ * (c) WebFactory Ltd, 2022 - 2026, www.webfactoryltd.com
  */
 
 class LoginLockdown_Setup extends LoginLockdown
@@ -231,7 +231,7 @@ class LoginLockdown_Setup extends LoginLockdown
         if (!is_array($options['whitelist'])) {
             $options['whitelist'] = explode(PHP_EOL, $options['whitelist']);
         }
-        
+
         LoginLockdown_Utility::clear_3rdparty_cache();
         $options['last_options_edit'] = current_time('mysql', true);
 

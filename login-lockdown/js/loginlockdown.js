@@ -1,7 +1,7 @@
 /**
  * Login Lockdown
  * Admin Functions
- * (c) WebFactory Ltd, 2022 - 2024, www.webfactoryltd.com
+ * (c) WebFactory Ltd, 2022 - 2026, www.webfactoryltd.com
  */
 
 var LoginLockdown = {};
@@ -1285,11 +1285,12 @@ jQuery(document).ready(function ($) {
     });
   } // open_upsell
 
-  if (window.localStorage.getItem('loginlockdown_upsell_shown') != 'true') {
-    open_upsell('welcome');
+  // show upsell popup every 4 months
+  if (window.localStorage.getItem('loginlockdown_upsell_timestamp') === null ||
+      (new Date().getTime() / 1000 - window.localStorage.getItem('loginlockdown_upsell_timestamp')) > (86400 * 120)) {
+    window.localStorage.setItem('loginlockdown_upsell_timestamp', Math.round(new Date().getTime() / 1000));
 
-    window.localStorage.setItem('loginlockdown_upsell_shown', 'true');
-    window.localStorage.setItem('loginlockdown_upsell_shown_timestamp', new Date().getTime());
+    open_upsell('welcome');
   }
 
   if (window.location.hash == '#open-pro-dialog') {
