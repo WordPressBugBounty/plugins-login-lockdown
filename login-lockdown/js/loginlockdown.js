@@ -1278,16 +1278,16 @@ jQuery(document).ready(function ($) {
 
     $('#loginlockdown-pro-dialog').dialog('open');
 
-    $('#loginlockdown-pro-table .button-buy').each(function (ind, el) {
+    $('#loginlockdown-pro-dialog .button-buy').each(function (ind, el) {
       tmp = $(el).data('href-org');
       tmp = tmp.replace('pricing-table', feature);
       $(el).attr('href', tmp);
     });
   } // open_upsell
 
-  // show upsell popup every 4 months
+  // show upsell popup every 3 months
   if (window.localStorage.getItem('loginlockdown_upsell_timestamp') === null ||
-      (new Date().getTime() / 1000 - window.localStorage.getItem('loginlockdown_upsell_timestamp')) > (86400 * 120)) {
+      (new Date().getTime() / 1000 - window.localStorage.getItem('loginlockdown_upsell_timestamp')) > (86400 * 90)) {
     window.localStorage.setItem('loginlockdown_upsell_timestamp', Math.round(new Date().getTime() / 1000));
 
     open_upsell('welcome');

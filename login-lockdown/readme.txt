@@ -3,7 +3,7 @@ Contributors: WebFactory
 Tags: login, block login, protect login, captcha, firewall
 Requires at least: 4.0
 Tested up to: 7.0
-Stable Tag: 2.16
+Stable Tag: 2.17
 Requires PHP: 5.2
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -61,6 +61,10 @@ You can report security bugs through the Patchstack Vulnerability Disclosure Pro
 3. Country blocking (PRO feature) allows you to block selected countries from accessing the site
 
 == Change Log ==
+= v2.17 =
+* 2026/07/23
+* minor fixes
+
 = v2.16 =
 * 2026/04/14
 * minor fixes

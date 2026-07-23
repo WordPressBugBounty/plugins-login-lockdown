@@ -317,7 +317,7 @@ class LoginLockdown_Admin extends LoginLockdown
     echo '<div id="loginlockdown_tabs_sidebar" style="display:none;">';
     echo '<div class="sidebar-box pro-ad-box">
             <p class="text-center"><a href="#" data-pro-feature="sidebar-box-logo" class="open-pro-dialog">
-            <img src="' . esc_url(LOGINLOCKDOWN_PLUGIN_URL . '/images/loginlockdown-logo.png') . '" alt="Login Lockdown PRO" title="Login Lockdown PRO"></a><br>PRO version is here! Grab the launch discount.<br><b>All prices are LIFETIME!</b></p>
+            <img src="' . esc_url(LOGINLOCKDOWN_PLUGIN_URL . '/images/loginlockdown-logo.png') . '" alt="Login Lockdown PRO" title="Login Lockdown PRO"></a><br><b>Get PRO for ONLY $9.99</b></p>
             <ul class="plain-list">
                 <li>Firewall</li>
                 <li>Login Page Customization</li>
@@ -325,14 +325,14 @@ class LoginLockdown_Admin extends LoginLockdown
                 <li>Email Based 2FA</li>
                 <li>Country Blocking</li>
                 <li>Temporary Access Links</li>
-                <li>Cloud Blacklists</li>
+                <li>Cloud Blacklists Powered by our SaaS</li>
                 <li>Licenses &amp; Sites Manager (remote SaaS dashboard)</li>
                 <li>White-label Mode</li>
                 <li>Complete Codeless Plugin Rebranding</li>
                 <li>Email support from plugin developers</li>
             </ul>
 
-            <p class="text-center"><a href="#" class="open-pro-dialog button button-buy" data-pro-feature="sidebar-box-btn">Get a LIFETIME license Now</a></p>
+            <p class="text-center"><a href="#" class="open-pro-dialog button button-buy" data-pro-feature="sidebar-box-btn">Get PRO for ONLY $9.99</a></p>
             </div>';
 
     if (!defined('EPS_REDIRECT_VERSION') && !defined('WF301_PLUGIN_FILE')) {
@@ -358,7 +358,7 @@ class LoginLockdown_Admin extends LoginLockdown
 
         <div class="center logo"><a href="https://wploginlockdown.com/?ref=loginlockdown-free-pricing-table" target="_blank"><img src="' . esc_url(LOGINLOCKDOWN_PLUGIN_URL . '/images/loginlockdown-logo.png') . '" alt="Login Lockdown PRO" title="Login Lockdown PRO"></a><br>
 
-        <span>Limited PRO Launch Discount - <b>all prices are LIFETIME</b>! Pay once &amp; use forever!</span>
+        <span>Limited PRO Discount - <b>get a license for ONLY $9.99</b>!</span>
         </div>
 
         <table id="loginlockdown-pro-table">
@@ -447,6 +447,8 @@ class LoginLockdown_Admin extends LoginLockdown
         </tr>
 
         </table>
+
+        <div class="upsell-footer-2 center">Need the plugin only for a <b>short period of time</b>? <a class="button-buy" target="_blank" data-href-org="https://wploginlockdown.com/buy/?product=personal-monthly&ref=pricing-table" href="https://wploginlockdown.com/buy/?product=personal-monthly&ref=pricing-table"><b>Get it for ONLY $9.99</b><small> /month</small></a> &amp; cancel any time!</div>
 
         <div class="center footer"><b>100% No-Risk Money Back Guarantee!</b> If you don\'t like the plugin over the next 7 days, we will happily refund 100% of your money. No questions asked! Payments are processed by our merchant of records - <a href="https://paddle.com/" target="_blank">Paddle</a>.</div>
       </div>';
